@@ -1,0 +1,30 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="PRJ.master.cs" Inherits="PRJ" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href = "Formatter.css" rel = "stylesheet" type = "text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+       
+    <div class ="Header">
+        <asp:SiteMapDataSource ID ="data" runat ="server" StartingNodeOffset="0" ShowStartingNode="false"/>
+        <asp:Menu ID ="Menu1" runat ="server" DataSourceID ="data"/>
+    </div>
+
+    <div class ="leftPanel">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+
+    <div class ="rightPanel">
+         <asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server">
+    </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
